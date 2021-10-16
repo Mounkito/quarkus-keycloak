@@ -54,3 +54,18 @@ If you want to learn more about building native executables, please consult http
 Easily start your RESTful Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+
+
+## Keycloak
+
+### How to get the token 
+
+POST : {{server}}/auth/realms/{{realm}}/protocol/openid-connect/token
+
+with x-www-form-urlencoded : 
+- username : {username}
+- pasword : {username}
+- grant_type : password
+- client_id : {clientid}
+
+then use the token bearer for auth
